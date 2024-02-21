@@ -13,6 +13,7 @@ public class MyFiles {
     public MyFiles() {
         FilesCreator();
         Write();
+        ReadFromFile();
     }
 
     private void FilesCreator() {
@@ -69,6 +70,17 @@ public class MyFiles {
             }
         } catch (Exception e) {
             System.out.println("Please try again");
+        }
+    }
+
+    private void ReadFromFile() {
+        try {
+            Scanner rScan = new Scanner(myFileObj);
+            while (rScan.hasNextLine()) {
+                System.out.println(rScan.hasNext());
+            }
+        } catch (Exception e) {
+            System.out.println("Could not read file");
         }
     }
 }
